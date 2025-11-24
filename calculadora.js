@@ -1,6 +1,7 @@
 let a = 7;
 let b = 5;
-let operacion = "suma";
+let operacion = "";
+
 
 function realizarOperacion(a, b, operacion){
     if (operacion === "suma"){
@@ -23,6 +24,7 @@ function realizarOperacion(a, b, operacion){
 let continuar = true;
 
 while (continuar) {
+
     let a = parseFloat(prompt("Ingrese el primer número:"));
     let b = parseFloat(prompt("Ingrese el segundo número:"));
     let operacion = prompt("ingrese operación (suma, resta, multiplicacion, division o salir):");
@@ -35,4 +37,11 @@ while (continuar) {
 
     let resultado = realizarOperacion(a, b, operacion);
     alert("Resultado = " + resultado);
+
+    let respuesta = prompt("¿Desea realizar otra operación? (si / no)");
+
+    if (respuesta.toLowerCase() !== "si"){
+        alert("Programa finalizado. 👋");
+        continuar = false;
+    }
 }
